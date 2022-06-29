@@ -3,6 +3,7 @@ import Toggle from "react-styled-toggle";
 import styled from "styled-components";
 import { isDarkAtom } from "../../atom";
 import { useSetRecoilState} from 'recoil';
+import { Link } from "react-router-dom";
 
 
 const Container =styled.div`
@@ -59,14 +60,14 @@ const SpanEach = styled.span`
 `
 
 const SpanOne =styled(SpanEach)`
-    background: #adc1ce;
+    background: ${(props)=>props.theme.navItemColorOne};
     animation-delay: 1.5s;
 `
 const SpanTwo = styled(SpanEach)`
     animation-delay: 1s;
 `
 const SpanThree = styled(SpanEach)`
-    background: #505355;
+    background: ${(props)=>props.theme.navItemColortwo};
     animation-delay: 0.5s;
 `
 
@@ -92,7 +93,6 @@ const NavMenuEach = styled.div`
 
 function Navbar(){
     const modechange = useSetRecoilState(isDarkAtom);
-
     return (
         <Container>
             <Nav>
@@ -103,10 +103,22 @@ function Navbar(){
                     <SpanFour>H</SpanFour>
                 </SpanContainer>
                 <NavMenuDiv>
-                    <NavMenuEach>Project</NavMenuEach>
-                    <NavMenuEach>ABOUT</NavMenuEach>
-                    <NavMenuEach>CONNECT</NavMenuEach>
-                    <Toggle onChange={()=>{modechange((prev)=>!prev)}}/>
+                    <NavMenuEach>
+                        <Link to="/project">
+                            Project
+                        </Link>
+                    </NavMenuEach>
+                    <NavMenuEach>
+                        <Link to="/about">
+                            About
+                        </Link>
+                    </NavMenuEach>
+                    <NavMenuEach style={{marginRight:"20px"}}>
+                        <Link to="/connect">
+                            Connect
+                        </Link>
+                    </NavMenuEach>
+                    <Toggle backgroundColorChecked="#505355"  width={80} translate={45} onChange={()=>{modechange((prev)=>!prev)}}/>
                 </NavMenuDiv>
             </Nav>
         </Container>

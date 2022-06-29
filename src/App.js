@@ -34,6 +34,7 @@ body {
 	line-height: 1;
 	background-color: ${(props) => props.theme.bgColor};
 	color: ${(props) => props.theme.fontColor};
+	font-family: 'Nanum Gothic Coding', monospace;
 }
 ol, ul {
 	list-style: none;
