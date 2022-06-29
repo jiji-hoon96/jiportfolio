@@ -5,12 +5,12 @@ import { IconCloud } from "react-icon-cloud";
 const tagCanvasOptions = {
     clickToFront: 500,
     depth: 1,
-    imageScale: 2,
-    initial: [0.1, -0.1],
+    imageScale: 2.3,
+    initial: [0.3, -0.3],
     outlineColour: '#0000',
     reverse: true,
     tooltip: 'native', 
-    tooltipDelay: 0,
+    tooltipDelay: 0,    
     wheelZoom: false,
   }
 
@@ -42,7 +42,7 @@ function Circle (){
         key={v4()}
         id={"icon"}
         minContrastRatio={1}
-        iconSize={30}
+        iconSize={60}
         backgroundHexColor={"#FFF"}
         fallbackHexColor={"#000"}
         tags={iconTags}

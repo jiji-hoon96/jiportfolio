@@ -6,6 +6,7 @@ import { useSetRecoilState} from 'recoil';
 
 const NavbarDiv = styled.div`
     width:90%;
+    position: fixed;
     display: flex;
     margin: 0 auto;
     height: 100px;
@@ -14,10 +15,7 @@ const NavbarDiv = styled.div`
 const LogoDiv= styled.div`
     width:30%;
     height: 100px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    
+    margin-right: 20px;
 `
 const NavItemDiv = styled.div`
     width:70%;
@@ -29,19 +27,34 @@ const NavItemDiv = styled.div`
 
 const NavItemEach =styled.div`
     display:flex;
-    justify-content: center;
     align-items: center;
-    margin: 0px 5px;
-    width: 25%;
+    justify-content: center;
+    margin: 0px 10px 0px 0px;
+    width: 150px;
     height: 60px;
+    cursor: pointer;
+    transition: transform 250ms;
+    :hover{
+        transform: translateY(-7px);
+    }
+    @media all and (min-width:480px) and (max-width:767px) {
+        width:15%;
+        font-size: 12px;
+        margin:0px 10px;
+    } 
+    @media all and (max-width:479px) {
+        width:15%;
+        margin:0px 10px;
+        font-size: 12px;
+    }
 `
 
 const SpanEach = styled.span`
     position: absolute;
-    top:5%;
-    left:10%;
-    width:15px;
-    height: 15px;
+    top:25%;
+    left:11%;
+    width:22px;
+    height: 22px;
     border-radius: 50%;
     animation: speed 2s infinite ease-in-out;
     @keyframes speed {
@@ -72,6 +85,7 @@ const SpanOne =styled(SpanEach)`
     animation-delay: 1.5s;
 `
 const SpanTwo = styled(SpanEach)`
+    font-size:32px;
     animation-delay: 1s;
 `
 const SpanThree = styled(SpanEach)`
@@ -80,7 +94,7 @@ const SpanThree = styled(SpanEach)`
 `
 
 const SpanFour = styled(SpanEach)`
-    
+    font-size:32px;
 `
 
 function Nav(){
