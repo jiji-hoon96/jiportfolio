@@ -24,6 +24,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -31,6 +32,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 	line-height: 1;
 	background-color: ${(props) => props.theme.bgColor};
 	color: ${(props) => props.theme.fontColor};
