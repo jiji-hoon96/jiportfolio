@@ -10,13 +10,14 @@ const Container =styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     padding-bottom: 1rem;
 `
 const Nav =styled.div`
-    width: 100%;
+    width: 90%;
     display: flex; 
     align-items: center;
+    justify-content: space-between;
     margin: 0 auto;
     height: 7rem;
     padding-bottom: 1rem;
@@ -24,10 +25,6 @@ const Nav =styled.div`
 
 const SpanContainer = styled.div`
     transform: translate(-50% -50%);
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 `
 const SpanEach = styled.span`
     display: block;
@@ -75,9 +72,7 @@ const SpanFour = styled(SpanEach)`
     
 `
 const NavMenuDiv =styled.div`
-    width: 70%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: row;
 `
@@ -113,13 +108,13 @@ function Navbar(){
                             About
                         </Link>
                     </NavMenuEach>
-                    <NavMenuEach style={{marginRight:"20px"}}>
+                    <NavMenuEach>
                         <Link to="/connect">
                             Connect
                         </Link>
                     </NavMenuEach>
-                    <Toggle backgroundColorChecked="#505355"  width={80} translate={45} onChange={()=>{modechange((prev)=>!prev)}}/>
                 </NavMenuDiv>
+                <Toggle backgroundColorChecked="#505355"  width={80} translate={45} onChange={()=>{modechange((prev)=>!prev)}}/>
             </Nav>
         </Container>
     )
