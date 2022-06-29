@@ -36,9 +36,6 @@ const NavItemEach =styled.div`
     height: 60px;
 `
 
-const NavToggle = styled.div`
-    
-`
 const SpanEach = styled.span`
     position: absolute;
     top:5%;
