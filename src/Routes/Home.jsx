@@ -6,10 +6,11 @@ import Circle from "./components/Circle";
 
 const HomeDiv =styled.div`
     width:80%;
-    padding-top:150px;
     margin: 0 auto;
+    padding: 150px 20px 0px 20px;
     align-items: center;
     display: flex;
+    justify-content: space-between;
     margin-bottom: 50px;
     grid-template-columns: 1fr;
 `
@@ -18,17 +19,35 @@ const HelloDiv = styled.div`
     display:flex;
     flex-direction: column;
     justify-content: center;
+    @media all and (min-width:480px) and (max-width:767px) {
+        width:50%;
+    } 
+    @media all and (max-width:479px) {
+        width:50%;
+    }
 `
 
 const CircleDiv=styled.div`
     width:40%;
     height:30%;
     margin: 0 auto;
-    padding: 10px;
+    padding:10px;
+    @media all and (min-width:480px) and (max-width:767px) {
+        width:50%;
+    } 
+    @media all and (max-width:479px) {
+        width:50%;
+    }
 `
 
 const HelloSpan = styled.div`
     font-size:18px;
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size: 12px;
+    } 
+    @media all and (max-width:479px) {
+        font-size: 12px;
+    }
 `
 
 const IntroduceDiv = styled.div`
@@ -36,10 +55,10 @@ const IntroduceDiv = styled.div`
     font-weight: bold;
     margin-bottom: 20px;
     @media all and (min-width:480px) and (max-width:767px) {
-        font-size: 32px;
+        font-size: 24px;
     } 
     @media all and (max-width:479px) {
-        font-size: 32px;
+        font-size: 24px;
     }
 `
 
@@ -57,11 +76,23 @@ const HelloBtn = styled.div`
     :hover{
         transform: translateY(-7px);
     }
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size: 12px;
+    } 
+    @media all and (max-width:479px) {
+        font-size: 12px;
+    }
 `
 
 const Slash =styled.div`
     font-size : 24px;
     margin: 20px 10px 0px 0px;
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size: 12px;
+    } 
+    @media all and (max-width:479px) {
+        font-size: 12px;
+    }
 `
 
 function Home(){
