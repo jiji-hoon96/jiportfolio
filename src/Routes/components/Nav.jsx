@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Toggle from "react-styled-toggle";
-import { isDarkAtom } from "../../atom";
-import { useSetRecoilState} from 'recoil';
+import NavToggle from './NavToggle';
+import { Sun,Moon } from "react-feather";
 
 const NavbarDiv = styled.div`
     width:90%;
@@ -97,8 +96,10 @@ const SpanFour = styled(SpanEach)`
     font-size:32px;
 `
 
+
+
 function Nav(){
-    const modechange = useSetRecoilState(isDarkAtom);
+    
     return (
         <NavbarDiv>
             <LogoDiv>
@@ -123,8 +124,11 @@ function Nav(){
                         Connect
                     </Link>
                 </NavItemEach>
+                <NavToggle>
+                    <Sun />
+                    <Moon />
+			    </NavToggle>
             </NavItemDiv>
-            <Toggle backgroundColorChecked="#505355"  onChange={()=>{modechange((prev)=>!prev)}}/>
         </NavbarDiv>
     )
 }
