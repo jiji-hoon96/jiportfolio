@@ -24,6 +24,7 @@ const CircleDiv=styled.div`
     width:40%;
     height:30%;
     margin: 0 auto;
+    padding: 10px;
 `
 
 const HelloSpan = styled.div`

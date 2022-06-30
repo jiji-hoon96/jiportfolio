@@ -77,6 +77,18 @@ const SpanEach = styled.span`
         border-radius: 0%;
     }
     }
+    @media all and (min-width:480px) and (max-width:767px) {
+        width:12px;
+        height: 12px;
+        top:35%;
+        left:11%;
+    } 
+    @media all and (max-width:479px) {
+        width:12px;
+        height: 12px;
+        top:35%;
+        left:11%;
+    }
 `
 
 const SpanOne =styled(SpanEach)`
@@ -86,6 +98,12 @@ const SpanOne =styled(SpanEach)`
 const SpanTwo = styled(SpanEach)`
     font-size:32px;
     animation-delay: 1s;
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size:20px;
+    } 
+    @media all and (max-width:479px) {
+        font-size:20px;
+    }
 `
 const SpanThree = styled(SpanEach)`
     background: ${(props)=>props.theme.navItemColortwo};
@@ -94,6 +112,12 @@ const SpanThree = styled(SpanEach)`
 
 const SpanFour = styled(SpanEach)`
     font-size:32px;
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size:20px;
+    } 
+    @media all and (max-width:479px) {
+        font-size:20px;
+    }
 `
 
 
