@@ -120,17 +120,17 @@ const SpanFour = styled(SpanEach)`
     }
 `
 
-
-
 function Nav(){
     
     return (
         <NavbarDiv>
             <LogoDiv>
-                <SpanOne/>
-                <SpanTwo>J</SpanTwo>
-                <SpanThree/>
-                <SpanFour>H</SpanFour>
+                <Link to="/">
+                    <SpanOne/>
+                    <SpanTwo>J</SpanTwo>
+                    <SpanThree/>
+                    <SpanFour>H</SpanFour>
+                </Link>
             </LogoDiv>
             <NavItemDiv>
                 <NavItemEach>

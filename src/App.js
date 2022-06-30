@@ -3,6 +3,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./theme";
 import { isDarkAtom } from "./atom";
 import { useRecoilValue } from "recoil";
+import { BrowserRouter } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -67,10 +68,12 @@ a {
 function App() {
   const isDark = useRecoilValue(isDarkAtom);
   return (
-    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-      <GlobalStyle />
-      <Router />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        <GlobalStyle />
+        <Router />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

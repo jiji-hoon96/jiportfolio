@@ -1,10 +1,11 @@
 import Nav from "./components/Nav";
 import styled from "styled-components";
 import Circle from "./components/Circle";
+import {motion} from 'framer-motion';
 
 
 
-const HomeDiv =styled.div`
+export const HomeDiv =styled(motion.div)`
     width:80%;
     margin: 0 auto;
     padding: 150px 20px 0px 20px;
@@ -99,7 +100,12 @@ function Home(){
     return(
         <>
             <Nav/>
-            <HomeDiv>
+            <HomeDiv 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 3 }}
+            >
                 <HelloDiv>
                     <IntroduceDiv>Hello, <br/> I'm Jihoon Lee</IntroduceDiv>
                     <HelloSpan>Junior Front-End Developer </HelloSpan>
