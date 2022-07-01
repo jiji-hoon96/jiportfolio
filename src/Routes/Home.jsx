@@ -2,7 +2,8 @@ import Nav from "./components/Nav";
 import styled from "styled-components";
 import Circle from "./components/Circle";
 import {motion} from 'framer-motion';
-
+import {FaAngleDown} from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 
 export const HomeDiv =styled(motion.div)`
@@ -75,7 +76,7 @@ const HelloBtn = styled.div`
     transition: transform 250ms;
     cursor: pointer;
     :hover{
-        transform: translateY(-7px);
+        transform: translateY(-3px);
     }
     @media all and (min-width:480px) and (max-width:767px) {
         font-size: 12px;
@@ -96,15 +97,21 @@ const Slash =styled.div`
     }
 `
 
+const NextDiv= styled.div`
+    display: flex;
+    justify-items: center;
+    font-size: 64px;
+`
+
 function Home(){
     return(
         <>
             <Nav/>
             <HomeDiv 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 3 }}
+                transition= { {duration: 0.5 }}
+                initial= { {opacity: 0, y: 20 }}
+                animate= { {opacity: 1, y: 0 }}
+                exit= { {opacity: 0, y: -20} }  
             >
                 <HelloDiv>
                     <IntroduceDiv>Hello, <br/> I'm Jihoon Lee</IntroduceDiv>
@@ -125,6 +132,11 @@ function Home(){
                     <Circle/>
                 </CircleDiv>
             </HomeDiv>
+            <Link to="/project">
+                <NextDiv>
+                    <FaAngleDown/>
+                </NextDiv>
+            </Link>
         </>
         
     )

@@ -29,12 +29,13 @@ const NavItemEach =styled.div`
     align-items: center;
     justify-content: center;
     margin: 0px 10px 0px 0px;
+    font-size:20px;
     width: 150px;
     height: 60px;
     cursor: pointer;
     transition: transform 250ms;
     :hover{
-        transform: translateY(-7px);
+        transform: translateY(-3px);
     }
     @media all and (min-width:480px) and (max-width:767px) {
         width:15%;
@@ -125,14 +126,17 @@ function Nav(){
     return (
         <NavbarDiv>
             <LogoDiv>
-                <Link to="/">
-                    <SpanOne/>
-                    <SpanTwo>J</SpanTwo>
-                    <SpanThree/>
-                    <SpanFour>H</SpanFour>
-                </Link>
+                <SpanOne/>
+                <SpanTwo>J</SpanTwo>
+                <SpanThree/>
+                <SpanFour>H</SpanFour>
             </LogoDiv>
             <NavItemDiv>
+                <NavItemEach>
+                    <Link to="/">
+                        Home
+                    </Link>
+                </NavItemEach>
                 <NavItemEach>
                     <Link to="/project">
                         Project
