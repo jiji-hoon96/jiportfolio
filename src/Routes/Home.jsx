@@ -15,41 +15,43 @@ export const HomeDiv =styled(motion.div)`
     display: flex;
     justify-content: space-between;
     grid-template-columns: 1fr;
+    @media all and (min-width:480px) and (max-width:767px) {
+      flex-direction: column;
+    } 
+    @media all and (max-width:479px) {
+      flex-direction: column;
+    }
 `
 
 const HelloDiv = styled.div`
     display:flex;
     flex-direction: column;
     justify-content: center;
-    @media all and (min-width:480px) and (max-width:767px) {
-        width:50%;
-    } 
-    @media all and (max-width:479px) {
-        width:50%;
-    }
+
 `
 
 const CircleDiv=styled.div`
     width:40%;
     height:30%;
-    margin: 0 auto;
-    padding:10px;
+    padding:10px; 
+    margin-bottom : 50px;
     @media all and (min-width:480px) and (max-width:767px) {
-        width:50%;
+        margin: 50px;
+        flex-direction: column;
+        width:60%;
+        height:40%;
     } 
     @media all and (max-width:479px) {
-        width:50%;
+        margin: 50px 0px;
+        flex-direction: column;
+        width:60%;
+        height:40%;
     }
 `
 
 const HelloSpan = styled.div`
     font-size:18px;
-    @media all and (min-width:480px) and (max-width:767px) {
-        font-size: 12px;
-    } 
-    @media all and (max-width:479px) {
-        font-size: 12px;
-    }
+
 `
 
 const IntroduceDiv = styled.div`
@@ -57,11 +59,12 @@ const IntroduceDiv = styled.div`
     font-weight: bold;
     margin-bottom: 20px;
     @media all and (min-width:480px) and (max-width:767px) {
-        font-size: 24px;
+        font-size: 32px;
     } 
     @media all and (max-width:479px) {
-        font-size: 24px;
+        font-size: 32px;
     }
+
 `
 
 export const BtnDiv= styled.div`
@@ -78,23 +81,11 @@ export const HelloBtn = styled.div`
     :hover{
         transform: translateY(-3px);
     }
-    @media all and (min-width:480px) and (max-width:767px) {
-        font-size: 12px;
-    } 
-    @media all and (max-width:479px) {
-        font-size: 12px;
-    }
 `
 
 export const Slash =styled.div`
     font-size : 24px;
     margin: 20px 10px 0px 0px;
-    @media all and (min-width:480px) and (max-width:767px) {
-        font-size: 12px;
-    } 
-    @media all and (max-width:479px) {
-        font-size: 12px;
-    }
 `
 
 const NextDiv= styled.div`

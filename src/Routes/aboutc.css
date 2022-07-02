@@ -1,93 +1,48 @@
-h1 {
-  margin: 2em auto 0;
-  font: 700 3em "Poppins", sans-serif;
-  color: #f1f5f6;
-  text-align: center;
-}
-
-h5 {
-  margin: 0 auto 2em;
-  font: 400 1.3em "Poppins", sans-serif;
-  color: #f1f5f6;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-}
-
-aside.context {
-  text-align: center;
-  color: #fff;
-  line-height: 1.7;
-}
-aside.context a {
-  text-decoration: none;
-  color: #fff;
-  padding: 3px 0;
-  border-bottom: 1px dashed;
-}
-aside.context .explanation {
-  max-width: 700px;
-  margin: 4em auto 0;
-}
-
-footer {
-  text-align: center;
-  margin: 2em auto;
-  width: 100%;
-}
-footer a {
-  text-decoration: none;
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px dashed #fff;
-  color: #fff;
-  margin: 5px;
-}
-footer a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-footer a .icons {
-  margin-top: 12px;
-  display: inline-block;
-  font-size: 20px;
-}
-
-.periodic-table {
-  display: grid;
-  grid-template-columns: repeat(9, 100px);
-  grid-template-rows: repeat(4, 100px);
-  grid-gap: 10px;
-  margin: auto;
-  max-width: 1200px;
-  justify-content: center;
-}
-
 .periodic-element {
   padding: 4px;
   position: relative;
   z-index: 1;
-  cursor: default;
+  margin: 10px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 .periodic-element .periodic-element-inner {
-  background: #202e38;
-  padding: 10px 15px;
-  width: calc(100% - 30px);
-  height: calc(100% - 20px);
+  background: #505355;
+  padding: 1px 6px;
+  width: 130px;
+  height: 170px;
   transition: inherit;
+  fill: black;
 }
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .periodic-element .periodic-element-inner {
+    background: #202e38;
+    width: 80px;
+    height: 120px;
+    transition: inherit;
+  }
+}
+@media all and (max-width: 479px) {
+  .periodic-element .periodic-element-inner {
+    background: #202e38;
+    width: 80px;
+    height: 120px;
+    transition: inherit;
+  }
+}
+
 .periodic-element .title {
   font: 700 34px/1.3 "Poppins", sans-serif;
   margin: 0.3em 0 0;
   transition: 0.8s ease 600ms;
 }
+
 .periodic-element .description {
-  font: 500 12px "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font: 700 12px "Poppins", sans-serif;
   margin-top: -0.2em;
 }
 .periodic-element:after {
@@ -130,7 +85,7 @@ a.periodic-element {
 }
 
 .social-media {
-  background: linear-gradient(to bottom right, #f3f9a6 0%, #cbc634 100%);
+  background: linear-gradient(to bottom right, #fae300 0%, #eacb5b 100%);
 }
 .social-media .title,
 .social-media .description {
@@ -189,7 +144,6 @@ a.periodic-element {
   margin: 0 25px 5px 5px;
   background: -webkit-linear-gradient(#ccc, #eee);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .legend-table__direction {
   display: inline-block;
@@ -197,13 +151,4 @@ a.periodic-element {
   background: -webkit-linear-gradient(#ccc, #eee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.empty-spacer-1 {
-  grid-column: 3 / span 4;
-  grid-row: 1;
-}
-.empty-spacer-2 {
-  grid-column: 1;
-  grid-row: 4;
 }
