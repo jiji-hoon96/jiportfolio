@@ -33,8 +33,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	margin: 0;
-    padding: 0;
+	margin: 0 auto;
+    padding: 0 auto;
     box-sizing: border-box;
 	line-height: 1;
 	background-color: ${(props) => props.theme.bgColor};

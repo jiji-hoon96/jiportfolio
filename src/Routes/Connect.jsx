@@ -3,6 +3,7 @@ import Nav from "./components/Nav"
 import { HomeDiv} from "./Home";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 const ConnectDiv = styled.section`
     width:100%;
@@ -325,6 +326,7 @@ function Connect(){
             </RightDiv>
         </ConnectDiv>
         </HomeDiv>
+        <Footer/>
         </>
     )
 }

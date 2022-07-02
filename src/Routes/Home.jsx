@@ -8,12 +8,13 @@ import { Link } from "react-router-dom";
 
 export const HomeDiv =styled(motion.div)`
     width:80%;
+    height:100%;
     margin: 0 auto;
     padding: 150px 20px 0px 20px;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    
     grid-template-columns: 1fr;
 `
 
