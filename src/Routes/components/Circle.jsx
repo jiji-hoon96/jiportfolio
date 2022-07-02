@@ -42,7 +42,7 @@ function Circle (){
         key={v4()}
         id={"icon"}
         minContrastRatio={1}
-        iconSize={60}
+        iconSize={50}
         backgroundHexColor={"#FFF"}
         fallbackHexColor={"#000"}
         tags={iconTags}

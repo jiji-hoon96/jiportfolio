@@ -64,13 +64,13 @@ const IntroduceDiv = styled.div`
     }
 `
 
-const BtnDiv= styled.div`
+export const BtnDiv= styled.div`
     width:200px;
     height:50px;
     display: flex;
 `
 
-const HelloBtn = styled.div`
+export const HelloBtn = styled.div`
     font-size : 24px;
     margin: 20px 10px 0px 0px;
     transition: transform 250ms;
@@ -86,7 +86,7 @@ const HelloBtn = styled.div`
     }
 `
 
-const Slash =styled.div`
+export const Slash =styled.div`
     font-size : 24px;
     margin: 20px 10px 0px 0px;
     @media all and (min-width:480px) and (max-width:767px) {
