@@ -7,8 +7,11 @@ const NavbarDiv = styled.div`
     width:90%;
     position: fixed;
     display: flex;
-    margin: 0 auto;
     height: 100px;
+    top: 0;
+    z-index: 10;
+    opacity: 0.97;
+    background-color: ${(props)=>props.theme.bgColor};
 `
 
 const LogoDiv= styled.div`
@@ -123,7 +126,6 @@ const SpanFour = styled(SpanEach)`
 `
 
 function Nav(){
-    
     return (
         <NavbarDiv>
             <LogoDiv>
@@ -145,7 +147,7 @@ function Nav(){
                 </NavItemEach>
                 <NavItemEach>
                     <Link to="/about">
-                        ABOUT
+                        SKILL
                     </Link>
                 </NavItemEach>
                 <NavItemEach>

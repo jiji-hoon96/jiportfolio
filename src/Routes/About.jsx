@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import './aboutc.css'
 import styled from "styled-components"
+import { useEffect, useState } from "react";
 
 const AboutDiv = styled.div`
     display: flex;
@@ -8,19 +9,46 @@ const AboutDiv = styled.div`
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
+
+`
+
+const AboutTitle =styled.div`
     padding-top: 150px;
-    @media all and (min-width:480px) and (max-width:767px) {
-     
-    } 
-    @media all and (max-width:479px) {
- 
-    }
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0px;
+    font: 700 1.7em "Poppins", sans-serif;
+    text-align: center;
+`
+const AboutSubTitle =styled.div`
+    font-size: 0.4em;
+    font-weight: 400;
+    margin-top: 10px;
 `
 
 function About(){
+    const text = "개발하면서 사용해본 SKILL LIST";
+    const [textlist,setTextList] = useState("");
+    const [count,setCount] =useState(0);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTextList(textlist + text[count]); 
+            setCount(count + 1); 
+        }, 100);
+        if(count === text.length)  {  
+            clearInterval(interval); 
+        }
+        return () => clearInterval(interval); 
+    })
     return (
         <>
         <Nav/>
+        <AboutTitle>
+            {textlist}
+            <AboutSubTitle>(마우스 커서를 이용해 skill use experience 을 볼 수 있습니다)</AboutSubTitle>
+        </AboutTitle>
         <AboutDiv
             transition= { {duration: 0.5 }}
             initial= { {opacity: 0, y: 20 }}
@@ -161,17 +189,14 @@ function About(){
             </div>
         </AboutDiv>
         <div className="legend-table">
-            <div className="legend-table__wrapper">
-                <span className="legend-table__marker social-media"></span>
-                <span className="legend-table__text">Front-End Skill</span>
-                <span className="legend-table__marker fun-stuff"></span>
-                <span className="legend-table__text">Back-End Skill</span><br />    
-                <span className="legend-table__marker just-trying"></span>
-                <span className="legend-table__text">Design Tool</span>
-                <span className="legend-table__marker intense-work"></span>
-                <span className="legend-table__text">Etc</span>
-               
-            </div>
+            <span className="legend-table__marker social-media"></span>
+            <span className="legend-table__text">Front-End Skill</span>
+            <span className="legend-table__marker fun-stuff"></span>
+            <span className="legend-table__text">Back-End Skill</span><br />    
+            <span className="legend-table__marker just-trying"></span>
+            <span className="legend-table__text">Design Tool</span>
+            <span className="legend-table__marker intense-work"></span>
+            <span className="legend-table__text">Etc</span>
         </div>
         </>
     )

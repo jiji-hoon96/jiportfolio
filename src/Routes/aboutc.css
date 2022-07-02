@@ -46,7 +46,7 @@
   margin-top: -0.2em;
 }
 .periodic-element:after {
-  z-index: 10;
+  z-index: 4;
   content: attr(data-description);
   background: #f9f8f7;
   color: #333;
@@ -66,7 +66,7 @@
 }
 .periodic-element:hover {
   transform: scale(1.12);
-  z-index: 10;
+  z-index: 5;
 }
 .periodic-element:hover .periodic-element-inner {
   background: transparent;
@@ -128,7 +128,7 @@ a.periodic-element {
   padding: 15px;
   text-align: center;
   font-size: 15px;
-  margin: 2em auto 0;
+  margin: 100px 10px 30px 10px;
 }
 .legend-table__marker {
   width: 25px;
@@ -144,11 +144,4 @@ a.periodic-element {
   margin: 0 25px 5px 5px;
   background: -webkit-linear-gradient(#ccc, #eee);
   -webkit-background-clip: text;
-}
-.legend-table__direction {
-  display: inline-block;
-  margin: 10px 15px 10px 10px;
-  background: -webkit-linear-gradient(#ccc, #eee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
