@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Nav from "./components/Nav"
 import { HomeDiv} from "./Home";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { useState } from "react";
 
 const ConnectDiv = styled.section`
     width:100%;
@@ -88,6 +90,11 @@ const ContacktCommit1=styled.div`
 `
 const ContactEmail = styled.div`
     font-size:16px;
+    cursor: pointer;
+    :hover{
+
+        transform: scale(1.05);
+    }
     @media all and (min-width:480px) and (max-width:767px) {
         font-size: 10px;
     } 
@@ -262,7 +269,11 @@ const DropTitle = styled.div`
     
 `
 
-function Connect(){
+function Connect(){ 
+    const [isCopy , setIsCopy] = useState(false);
+    const onCopy=()=>{
+        setIsCopy(true)
+    }
     return  (
         <>
         <Nav/>
@@ -295,9 +306,11 @@ function Connect(){
                     Please email to
                     </ContacktCommit1>
                 </ContactCommit>
-                <ContactEmail>
-                    jihoon7705@gmail.com
-                </ContactEmail>
+                <CopyToClipboard text="jihoon7705@gmail.com">
+                    <ContactEmail onClick={onCopy}>
+                        {isCopy ? "이메일이 복사 되었습니다" : "jihoon7705@gmail.com"}
+                    </ContactEmail>
+                </CopyToClipboard>
                 <BtnDiv style={{justifyItems:"flex-end"}}>
                         <HelloBtn style>
                             <a href="https://www.notion.so/Full-Stack-Developer-52ce9ef0ba8d4a3583ac46a5787dd888"  rel="noopener noreferrer" target="_blank">NOTION</a> 

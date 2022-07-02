@@ -30,6 +30,7 @@ const NavItemEach =styled.div`
     justify-content: center;
     margin: 0px 10px 0px 0px;
     font-size:20px;
+    font-weight: bold;
     width: 150px;
     height: 60px;
     cursor: pointer;
@@ -134,22 +135,22 @@ function Nav(){
             <NavItemDiv>
                 <NavItemEach>
                     <Link to="/">
-                        Home
+                        HOME
                     </Link>
                 </NavItemEach>
                 <NavItemEach>
                     <Link to="/project">
-                        Project
+                        PROJECT
                     </Link>
                 </NavItemEach>
                 <NavItemEach>
                     <Link to="/about">
-                        About
+                        ABOUT
                     </Link>
                 </NavItemEach>
                 <NavItemEach>
                     <Link to="/connect">
-                        Connect
+                        CONNECT
                     </Link>
                 </NavItemEach>
                 <NavToggle>
