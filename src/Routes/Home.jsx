@@ -14,7 +14,6 @@ export const HomeDiv =styled(motion.div)`
     align-items: center;
     display: flex;
     justify-content: space-between;
-    
     grid-template-columns: 1fr;
 `
 

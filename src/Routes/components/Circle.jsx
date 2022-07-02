@@ -17,10 +17,12 @@ const tagCanvasOptions = {
 const iconSlugs = [
     "typescript",
     "javascript",
+    "tailwindcss",
     "react",
     "html5",
     "css3",
     "nodedotjs",
+    "pug",
     "express",
     "nextdotjs",
     "prisma",
