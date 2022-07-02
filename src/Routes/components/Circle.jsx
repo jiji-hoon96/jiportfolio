@@ -25,14 +25,20 @@ const iconSlugs = [
     "pug",
     "express",
     "nextdotjs",
+    "npm",
     "prisma",
     "amazonaws",
     "postgresql",
     "firebase",
     "git",
+    "materialui",
+    "postcss",
     "github",
     "gitlab",
+    "styledcomponents",
     "visualstudiocode",
+    "heroku",
+    "apollographql"
   ];
 function Circle (){
     const iconTags = iconSlugs.map((slug) => ({
