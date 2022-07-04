@@ -8,18 +8,28 @@ const AboutDiv = styled.div`
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
-
 `
 
 const AboutTitle =styled.div`
     padding-top: 150px;
-    width:100%;
+    width:90%;
+    margin:0 auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 20px 0px;
-    font: 700 1.7em "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
     text-align: center;
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size: 18px;
+        font-weight: 400;
+    
+    } 
+    @media all and (max-width:479px) {
+        font-size: 18px;
+        font-weight: 400;
+    
+    }
 `
 const AboutSubTitle =styled.div`
     font-size: 0.4em;
@@ -34,6 +44,7 @@ const SkillElement =styled.div`
     margin: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    
     ::after{
         z-index: 4;
         content: attr(data-description);
@@ -44,10 +55,10 @@ const SkillElement =styled.div`
         top: 80%;
         opacity: 0;
         transition: opacity 0.3s ease 0.3s,
-            top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+        top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
         height: auto;
         font-size: 12px;
-        line-height: 1.4;
+        line-height: 2;
         padding: 10px;
         margin: 0 0 0 -50px;
         border-radius: 6px;
@@ -72,8 +83,8 @@ const SkillElementInner= styled.div`
     fill: black;
     @media all and (min-width: 480px) and (max-width: 767px) {  
         background: #505355;
-        width: 80px;
-        height: 120px;
+        width: 60px;
+        height: 90px;
         transition: inherit;
     }
     @media all and (max-width: 479px) {
@@ -115,7 +126,7 @@ const FrontElementTitle= styled(SkillElementTitle)`
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+   
 `
 const FrontElementDescription = styled(SkillElementDescription)`
     background: -webkit-linear-gradient(#f3f9a6, #cbc634);
@@ -182,16 +193,31 @@ const LabelDiv= styled.div`
     padding: 15px;
     text-align: center;
     font-size: 15px;
-    margin: 100px 10px 30px 10px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 10px 30px 10px;
 `
 
 const LabelMaker=styled.div`
-    width: 25px;
-    height: 25px;
+    height: 40px;
+    text-align: center;
     margin: 5px 5px 10px;
-    display: inline-block;
+    color:black;
+    width:130px;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     vertical-align: middle;
     box-shadow: 0.5px 1px rgba(0, 0, 0, 0.15);
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size: 10px;
+        
+    } 
+    @media all and (max-width:479px) {
+        font-size: 10px;
+        
+    }
 `
 
 function About(){
@@ -214,6 +240,20 @@ function About(){
         <AboutTitle>
             {textlist}
             <AboutSubTitle>(마우스 커서를 이용해 skill use experience 을 볼 수 있습니다)</AboutSubTitle>
+            <LabelDiv>
+            <LabelMaker style={{background:"#fae300"}}>
+                Front-End
+            </LabelMaker>
+            <LabelMaker style={{background:"#ff616d"}}>
+                Back-End
+            </LabelMaker>
+            <LabelMaker style={{background:"#37cfdc"}}>
+                Design Tool
+            </LabelMaker>
+             <LabelMaker style={{background:"#58ac30"}}>
+                ETC
+             </LabelMaker>
+        </LabelDiv>
         </AboutTitle>
         <AboutDiv
             transition= { {duration: 0.5 }}
@@ -354,16 +394,6 @@ function About(){
                 </SkillElementInner>
             </EtcElement>
         </AboutDiv>
-        <LabelDiv>
-            <div>
-            </div>
-            <div>
-            </div>
-            <div>
-            </div>
-             <div>
-             </div>
-        </LabelDiv>
         </>
     )
 }
