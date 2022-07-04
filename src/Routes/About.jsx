@@ -2,8 +2,9 @@ import Nav from "./components/Nav";
 import styled from "styled-components"
 import {  useState } from "react";
 import {Typewriter} from "react-simple-typewriter";
+import {motion} from "framer-motion"
 
-const AboutDiv = styled.div`
+const AboutDiv = styled(motion.div)`
     display: flex;
     width: 85%;
     flex-wrap: wrap;
@@ -19,7 +20,7 @@ const AboutDiv = styled.div`
     }
 `
 
-const AboutTitle =styled.div`
+const AboutTitle =styled(motion.div)`
     padding-top: 150px;
     width:90%;
     margin:0 auto;
@@ -262,7 +263,12 @@ function About(){
     return (
         <>
         <Nav/>
-        <AboutTitle>
+        <AboutTitle
+            transition= { {duration: 0.5 }}
+            initial= { {opacity: 0, y: 20 }}
+            animate= { {opacity: 1, y: 0 }}
+            exit= { {opacity: 0, y: -20} }  
+         >
             <span style={{ fontWeight: "bold", fontSize:"38px" }}>
             <Typewriter
                 loop
