@@ -1,7 +1,7 @@
 import Nav from "./components/Nav";
 import styled from "styled-components"
 import {  useState } from "react";
-import { Typing } from "typing-effect-reactjs";
+import {Typewriter} from "react-simple-typewriter";
 
 const AboutDiv = styled.div`
     display: flex;
@@ -259,13 +259,21 @@ function About(){
     const onchangeEtc = ()=>{
         setSelect(4);
     }
-    
     return (
         <>
         <Nav/>
         <AboutTitle>
-            <Typing text="개발하면서 사용해본 SKILL LIST"/> 
-            <Typing text="마우스 커서를 이용해 skill use experience 을 볼 수 있습니다" typeSpeed={100} deleteSpeed={100} shouldDelete={false}/>
+            <span style={{ fontWeight: "bold", fontSize:"38px" }}>
+            <Typewriter
+                loop
+                cursor
+                cursorStyle="_"
+                typeSpeed={90}
+                deleteSpeed={50}
+                delaySpeed={1000}
+                words={["내가 사용해본 기술 스택들 😊",]}
+            />
+            </span>
             <LabelDiv>
             <LabelMaker style={{background:"white"}} onClick={onDefault}>
                 All
@@ -283,6 +291,17 @@ function About(){
                 ETC
              </LabelMaker>
         </LabelDiv>
+        <span style={{ fontWeight: "bold" , fontSize:"16px", marginBottom:"20px"}}>
+            <Typewriter
+                loop
+                cursor
+                cursorStyle="_"
+                typeSpeed={100}
+                deleteSpeed={100}
+                delaySpeed={500}
+                words={["👇 (기술스택 사용 경험을 보고싶으면 아이콘에 마우스를 올려주세요!!) 👇"]}
+            />
+            </span>
         </AboutTitle>
         <AboutDiv
             transition= { {duration: 0.5 }}
