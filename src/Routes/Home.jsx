@@ -121,9 +121,9 @@ function Home(){
             <Nav/>
             <HomeDiv 
                 transition= { {duration: 0.5 }}
-                initial= { {opacity: 0, y: 20 }}
+                initial= { {opacity: 0, y: 400 }}
                 animate= { {opacity: 1, y: 0 }}
-                exit= { {opacity: 0, y: -20} }  
+                exit= { {opacity: 0, y: -400} }  
             >
                 <HelloDiv>
                     <IntroduceDiv>Hello, <br/> I'm Jihoon  <br/> Lee</IntroduceDiv>

@@ -6,18 +6,21 @@ import { useState } from "react";
 import Footer from "./components/Footer";
 
 const ConnectDiv = styled.section`
-    width:100%;
-    height:100%;
+   width:90%;
+    height:100vh;
     margin: 0 auto;
+    padding: 150px 20px 0px 20px;
     align-items: center;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    justify-content:space-around;
+    grid-template-columns: 1fr;
     @media all and (min-width:480px) and (max-width:767px) {
        flex-direction: column;
+       padding: 50px 20px 0px 20px;
     } 
     @media all and (max-width:479px) {
-       flex-direction :column;
+        flex-direction :column;
+        padding: 50px 20px 0px 20px;
     }
 `
 
@@ -280,9 +283,9 @@ function Connect(){
         <Nav/>
         <HomeDiv
             transition= { {duration: 0.5 }}
-            initial= { {opacity: 0, y: 20 }}
+            initial= { {opacity: 0, y: 400 }}
             animate= { {opacity: 1, y: 0 }}
-            exit= { {opacity: 0, y: -20} }  
+            exit= { {opacity: 0, y: -400} }  
         >
         <ConnectDiv>
             <LeftDiv>

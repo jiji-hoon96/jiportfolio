@@ -3,6 +3,16 @@ import styled from "styled-components"
 import {  useState } from "react";
 import {Typewriter} from "react-simple-typewriter";
 import {motion} from "framer-motion"
+import { Link } from "react-router-dom";
+import {FaAngleDown} from 'react-icons/fa';
+
+const NextDiv= styled.div`
+    margin-top: 100px;
+    display: flex;
+    justify-items: center;
+    font-size: 64px;
+`
+
 
 const AboutDiv = styled(motion.div)`
     display: flex;
@@ -243,6 +253,29 @@ const LabelMaker=styled.div`
     }
 `
 
+const TypingTextBig =styled.span`
+    font-weight: bold;
+    font-size: 38px;
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size: 18px;
+    } 
+    @media all and (max-width:479px) {
+        font-size: 18px;
+    }
+`
+
+const TypingTextSmall = styled.span`
+     font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+    @media all and (min-width:480px) and (max-width:767px) {
+        font-size: 10px;
+    } 
+    @media all and (max-width:479px) {
+        font-size: 10px;
+    }
+`
+
 function About(){
     const [select, setSelect] = useState(0);
     const onDefault = ()=>{
@@ -265,21 +298,21 @@ function About(){
         <Nav/>
         <AboutTitle
             transition= { {duration: 0.5 }}
-            initial= { {opacity: 0, y: 20 }}
+            initial= { {opacity: 0, y: 400 }}
             animate= { {opacity: 1, y: 0 }}
-            exit= { {opacity: 0, y: -20} }  
+            exit= { {opacity: 0, y: -400} }   
          >
-            <span style={{ fontWeight: "bold", fontSize:"38px" }}>
-            <Typewriter
-                loop
-                cursor
-                cursorStyle="_"
-                typeSpeed={90}
-                deleteSpeed={50}
-                delaySpeed={1000}
-                words={["내가 사용해본 기술 스택들 😊",]}
-            />
-            </span>
+            <TypingTextBig>
+                <Typewriter
+                    loop
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={90}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                    words={["내가 사용해본 기술 스택들 😊",]}
+                />
+            </TypingTextBig>
             <LabelDiv>
             <LabelMaker style={{background:"white"}} onClick={onDefault}>
                 All
@@ -297,7 +330,7 @@ function About(){
                 ETC
              </LabelMaker>
         </LabelDiv>
-        <span style={{ fontWeight: "bold" , fontSize:"16px", marginBottom:"20px"}}>
+        <TypingTextSmall>
             <Typewriter
                 loop
                 cursor
@@ -305,15 +338,15 @@ function About(){
                 typeSpeed={100}
                 deleteSpeed={100}
                 delaySpeed={500}
-                words={["👇 (기술스택 사용 경험을 보고싶으면 아이콘에 마우스를 올려주세요!!) 👇"]}
+                words={["👇 (기술 사용 경험을 보고싶으면 아이콘에 마우스를 올려주세요!!) 👇"]}
             />
-            </span>
+            </TypingTextSmall>
         </AboutTitle>
         <AboutDiv
             transition= { {duration: 0.5 }}
-            initial= { {opacity: 0, y: 20 }}
+            initial= { {opacity: 0, y: 400 }}
             animate= { {opacity: 1, y: 0 }}
-            exit= { {opacity: 0, y: -20} }  
+            exit= { {opacity: 0, y: -400} }  
         >
             <FrontEndElement data-description="HTML5 을 이용해 코드를 제작,수정,응용 할 수 있습니다" style={{opacity : select ===  0 ? "1": select===1 ? "1": "0.1"}}>
                 <SkillElementInner>
@@ -448,6 +481,11 @@ function About(){
                 </SkillElementInner>
             </EtcElement>
         </AboutDiv>
+        <Link to="/connect">
+            <NextDiv>
+                <FaAngleDown/>
+            </NextDiv>
+        </Link>
         </>
     )
 }
