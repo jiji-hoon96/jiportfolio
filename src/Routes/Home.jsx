@@ -8,10 +8,8 @@ import { Link } from "react-router-dom";
 
 export const HomeDiv =styled(motion.div)`
     width:90%;
-    height:100vh;
     margin: 0 auto;
-    padding: 150px 20px 0px 20px;
-    align-items: center;
+    padding-top: 150px;
     display: flex;
     justify-content:space-around;
     grid-template-columns: 1fr;
@@ -27,7 +25,7 @@ const HelloDiv = styled.div`
     display:flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
 `
 
 const CircleDiv=styled.div`
@@ -36,13 +34,13 @@ const CircleDiv=styled.div`
     @media all and (min-width:480px) and (max-width:767px) {
         margin: 50px;
         flex-direction: column;
-        width:60%;
+        
         height:40%;
     } 
     @media all and (max-width:479px) {
         margin: 50px 0px;
         flex-direction: column;
-        width:60%;
+        
         height:40%;
     }
 `
@@ -57,10 +55,10 @@ const IntroduceDiv = styled.div`
     font-weight: bold;
     margin-bottom: 20px;
     @media all and (min-width:480px) and (max-width:767px) {
-        font-size: 32px;
+        font-size: 48px;
     } 
     @media all and (max-width:479px) {
-        font-size: 32px;
+        font-size: 48px;
     }
 
 `

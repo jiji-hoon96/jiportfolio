@@ -6,21 +6,19 @@ import { useState } from "react";
 import Footer from "./components/Footer";
 
 const ConnectDiv = styled.section`
-   width:90%;
-    height:100vh;
+    width:90%;
     margin: 0 auto;
-    padding: 150px 20px 0px 20px;
     align-items: center;
     display: flex;
     justify-content:space-around;
     grid-template-columns: 1fr;
     @media all and (min-width:480px) and (max-width:767px) {
        flex-direction: column;
-       padding: 50px 20px 0px 20px;
+       justify-content:center;
     } 
     @media all and (max-width:479px) {
         flex-direction :column;
-        padding: 50px 20px 0px 20px;
+        justify-content:center;
     }
 `
 
@@ -29,12 +27,12 @@ const LeftDiv = styled.div`
     justify-content: center;
     align-items: center;
     width:50%;
-    height:100%; 
+    margin: 0;
     @media all and (min-width:480px) and (max-width:767px) {
-      margin-bottom: 20px;
+      margin: 0;
     } 
     @media all and (max-width:479px) {
-        margin-bottom: 20px;
+        margin: 0;
     }
 `
 
@@ -43,7 +41,8 @@ const RightDiv = styled.div`
     flex-direction: column;
     align-items: flex-end;
     width:50%;
-    height:100%;
+    
+    margin : 0;
 `
 const NameH1 = styled.div`
     font-size:48px;
@@ -96,7 +95,6 @@ const ContactEmail = styled.div`
     font-size:16px;
     cursor: pointer;
     :hover{
-
         transform: scale(1.05);
     }
     @media all and (min-width:480px) and (max-width:767px) {
@@ -150,11 +148,13 @@ const DropText = styled.div`
     font-size: 48px;
     vertical-align: -2px;
     @media all and (min-width:480px) and (max-width:767px) {
-        font-size: 20px;
+        font-size: 28px;
+        font-weight: bold;
         height: 100px;
     } 
     @media all and (max-width:479px) {
-        font-size: 20px;
+        font-size: 28px;
+        font-weight: bold;
         height: 100px;
     }
 `
@@ -264,11 +264,11 @@ const DropTitle = styled.div`
     font-size:24px;
     @media all and (min-width:480px) and (max-width:767px) {
         width:600px;
-        font-size: 10px;
+        font-size: 20px;
     } 
     @media all and (max-width:479px) {
         width:600px;
-        font-size: 10px;
+        font-size: 20px;
     }
     
 `
@@ -290,7 +290,7 @@ function Connect(){
         <ConnectDiv>
             <LeftDiv>
                 <DropText>
-                    <DropItem>책임감을 가진</DropItem>
+                    <DropItem>책임감을 가진</DropItem> 
                     <DropItem>할 일을 미루지 않는</DropItem>
                     <DropItem>소통할줄 아는</DropItem>
                     <DropItem>배움의 의지가 강한</DropItem>
@@ -313,6 +313,7 @@ function Connect(){
                 <CopyToClipboard text="jihoon7705@gmail.com">
                     <ContactEmail onClick={onCopy}>
                         {isCopy ? "이메일이 복사 되었습니다" : "jihoon7705@gmail.com"}
+                        
                     </ContactEmail>
                 </CopyToClipboard>
                 <BtnDiv style={{justifyItems:"flex-end"}}>
