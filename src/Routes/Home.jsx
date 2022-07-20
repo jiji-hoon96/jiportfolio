@@ -4,6 +4,8 @@ import Circle from "./components/Circle";
 import {motion} from 'framer-motion';
 import {FaAngleDown} from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import About from './About';
+import Connect from './Connect';
 
 
 export const HomeDiv =styled(motion.div)`
@@ -145,6 +147,8 @@ function Home(){
                     <Circle/>
                 </CircleDiv>
             </HomeDiv>
+            <About/>
+            <Connect/>
             <Link to="/project">
                 <NextDiv>
                     <FaAngleDown/>
