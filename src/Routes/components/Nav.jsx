@@ -43,13 +43,13 @@ const NavItemEach =styled.div`
     }
     @media all and (min-width:480px) and (max-width:767px) {
         width:15%;
-        font-size: 12px;
+        font-size: 16px;
         margin:0px 2%;
     } 
     @media all and (max-width:479px) {
         width:15%;
         margin:0px 2%;
-        font-size: 12px;
+        font-size: 16px;
     }
 `
 

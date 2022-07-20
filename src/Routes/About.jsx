@@ -21,12 +21,10 @@ const AboutDiv = styled(motion.div)`
     margin: 0 auto;
     justify-content: center;
     @media all and (min-width:480px) and (max-width:767px) {
-        width:75%;
-    
+        width:100%;
     } 
     @media all and (max-width:479px) {
-        width:75%;
-    
+        width:100%;
     }
 `
 
@@ -54,29 +52,41 @@ const AboutTitle =styled(motion.div)`
 const SkillElement =styled.div`
     padding: 4px;
     position: relative;
+    border-radius: 5px;
     z-index: 1;
     margin: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    
     ::after{
         z-index: 4;
         content: attr(data-description);
         background: #f9f8f7;
         color: #333;
-        width: 180px;
+        width: 200px;
         position: absolute;
         top: 80%;
+        letter-spacing: 0.2em;
+        left: 10%;
         opacity: 0;
-        transition: opacity 0.3s ease 0.3s,
-        top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+        transition: opacity 0.3s ease 0.3s, top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
         height: auto;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 2;
+        font-weight: 600;
         padding: 10px;
         margin: 0 0 0 -50px;
         border-radius: 6px;
         text-align: center;
+        @media all and (min-width: 480px) and (max-width: 767px) {  
+            font-size: 10px;
+            width: 100px;
+            left: 30%;
+        }
+        @media all and (max-width: 479px) {
+        font-size: 10px;
+        width: 100px;
+        left: 30%;
+        }
     }
     :hover{
         transform: scale(1.12);
@@ -89,24 +99,21 @@ const SkillElement =styled.div`
 `
 
 const SkillElementInner= styled.div`
-    background: #505355;
     padding: 1px 6px;
     width: 130px;
     height: 170px;
     transition: inherit;
     fill: black;
     @media all and (min-width: 480px) and (max-width: 767px) {  
-        background: #505355;
-        width: 70px;
-        height: 100px;
+        width: 80px;
+        height: 120px;
         padding: 1px;
         transition: inherit;
     }
     @media all and (max-width: 479px) {
-        background: #505355;
-        width: 70px;
+        width: 80px;
         padding: 1px;
-        height: 100px;
+        height: 120px;
         transition: inherit;
     }
     :hover{
@@ -133,17 +140,17 @@ const SkillElementDescription= styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-    font: 700 12px "Poppins", sans-serif;
-    margin-top: -0.2em;
+    font: 700 20px "Poppins", sans-serif;
+    margin-top: -1em;
     :hover{
         -webkit-text-fill-color: #222;
     }
     @media all and (min-width: 480px) and (max-width: 767px) {  
-        font-size:10px;
+        font-size:12px;
         margin-top: -1.5em;
     }
     @media all and (max-width: 479px) {
-        font-size:10px;
+        font-size:12px;
         margin-top: -1.5em;
     }
 `
@@ -159,7 +166,7 @@ const FrontElementTitle= styled(SkillElementTitle)`
    
 `
 const FrontElementDescription = styled(SkillElementDescription)`
-    background: -webkit-linear-gradient(#f3f9a6, #cbc634);
+    background: black;
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -177,7 +184,7 @@ const BackEndElementTitle= styled(SkillElementTitle)`
 `
 
 const BackEndElmentDescription=styled(SkillElementDescription)`
-  background: -webkit-linear-gradient(#ff616d, #ffc171);
+  background: black;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -195,7 +202,7 @@ const EtcElementTitle= styled(SkillElementTitle)`
 `
 
 const EtcElementDescription = styled(SkillElementDescription)`
-  background: -webkit-linear-gradient(#58ac30, #a7df62);
+  background: black;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -213,7 +220,7 @@ const DesignElementTitle =styled(SkillElementTitle)`
 `
 
 const DesignElementDescription =styled(SkillElementDescription)`
-    background: -webkit-linear-gradient(#37cfdc, #5a88e5);
+    background: black;
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -229,12 +236,13 @@ const LabelDiv= styled.div`
 `
 
 const LabelMaker=styled.div`
-    height: 40px;
+    height: 50px;
+    font-size:24px;
     text-align: center;
     margin: 5px 5px 10px;
     color:black;
-    width:130px;
-    border-radius: 20px;
+    width:150px;
+    border-radius: 5px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -242,14 +250,16 @@ const LabelMaker=styled.div`
     box-shadow: 0.5px 1px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     :hover{
-        transform: translateY(-5px);
-        transition-duration: 0.5s;
+        transform: translateY(-10px);
+        transition-duration: 1s;
     }
     @media all and (min-width:480px) and (max-width:767px) {
-        font-size: 10px;
+        height:40px;
+        font-size: 14px;
     } 
     @media all and (max-width:479px) {
-        font-size: 10px;
+        height:40px;
+        font-size: 14px;
     }
 `
 
@@ -314,19 +324,19 @@ function About(){
                 />
             </TypingTextBig>
             <LabelDiv>
-            <LabelMaker style={{background:"white"}} onClick={onDefault}>
+            <LabelMaker style={{background:"white", transform : select === 0 ? "translateY(-10px)": "translateY(0px)"}} onClick={onDefault}>
                 All
             </LabelMaker>
-            <LabelMaker style={{background:"#fae300"}} onClick={onchangeFront}>
+            <LabelMaker style={{background:"#fae300",transform : select === 1 ? "translateY(-10px)": "translateY(0px)"}} onClick={onchangeFront}>
                 Front-End
             </LabelMaker>
-            <LabelMaker style={{background:"#ff616d"}} onClick={onchangeBack}>
+            <LabelMaker style={{background:"#ff616d",transform : select === 2 ? "translateY(-10px)": "translateY(0px)"}} onClick={onchangeBack}>
                 Back-End
             </LabelMaker>
-            <LabelMaker style={{background:"#37cfdc"}} onClick={onchangeDesign}>
+            <LabelMaker style={{background:"#37cfdc",transform : select === 3 ? "translateY(-10px)": "translateY(0px)"}} onClick={onchangeDesign}>
                 Design Tool
             </LabelMaker>
-             <LabelMaker style={{background:"#58ac30"}} onClick={onchangeEtc}>
+             <LabelMaker style={{background:"#58ac30",transform : select === 4 ? "translateY(-10px)": "translateY(0px)"}} onClick={onchangeEtc}>
                 ETC
              </LabelMaker>
         </LabelDiv>
