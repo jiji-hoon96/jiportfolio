@@ -78,7 +78,7 @@ function Project() {
           >
             <ProjectDiv>
               <ProjectDivTop>
-                <img src={health} width="600px" height="300px" />
+                <img alt="health" src={health} width="600px" height="300px" />
               </ProjectDivTop>
               <ProjectDivBottom>
                 <ProjectTitle>Project : 헬쓰리</ProjectTitle>
@@ -98,7 +98,7 @@ function Project() {
           </a>
           <ProjectDiv>
             <ProjectDivTop>
-              <img src={coin} width="600px" height="300px" />
+              <img alt="coin" src={coin} width="600px" height="300px" />
             </ProjectDivTop>
             <ProjectDivBottom>
               <ProjectTitle>Project : JiCoin</ProjectTitle>
@@ -116,7 +116,7 @@ function Project() {
           </ProjectDiv>
           <ProjectDiv>
             <ProjectDivTop>
-              <img src={jihoon1} width="600px" height="300px" />
+              <img alt="jihoon1" src={jihoon1} width="600px" height="300px" />
             </ProjectDivTop>
             <ProjectDivBottom>
               <ProjectTitle>Project : JiPortFolio</ProjectTitle>
@@ -134,7 +134,7 @@ function Project() {
           >
             <ProjectDiv>
               <ProjectDivTop>
-                <img src={weco} width="600px" height="300px" />
+                <img alt="weco" src={weco} width="600px" height="300px" />
               </ProjectDivTop>
               <ProjectDivBottom>
                 <ProjectTitle>Project : Weco</ProjectTitle>

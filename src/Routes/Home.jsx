@@ -91,29 +91,6 @@ const NextDiv = styled.div`
   font-size: 64px;
 `;
 
-const ResumeA = styled.a`
-  width: 200px;
-  height: 50px;
-  margin-top: 20px;
-`;
-const ResumeBtn = styled.button`
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-
-  border: none;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  background-color: #707070;
-  :hover {
-    transform: scale(1.05);
-    transition-duration: 1s;
-    background-color: ${(props) => props.theme.fontColor};
-    color: ${(props) => props.theme.bgColor};
-  }
-`;
-
 function Home() {
   return (
     <>
