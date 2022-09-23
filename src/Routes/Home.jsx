@@ -64,13 +64,14 @@ const IntroduceDiv = styled.div`
 `;
 
 export const BtnDiv = styled.div`
-  width: 200px;
-  height: 50px;
+  width: 270px;
+  height: 80px;
+  margin-top: 50px;
   display: flex;
 `;
 
 export const HelloBtn = styled.div`
-  font-size: 24px;
+  font-size: 36px;
   margin: 20px 10px 0px 0px;
   transition: transform 250ms;
   cursor: pointer;
@@ -80,7 +81,7 @@ export const HelloBtn = styled.div`
 `;
 
 export const Slash = styled.div`
-  font-size: 24px;
+  font-size: 36px;
   margin: 20px 10px 0px 0px;
 `;
 
@@ -131,7 +132,7 @@ function Home() {
           <BtnDiv>
             <HelloBtn>
               <a
-                href="https://www.notion.so/Full-Stack-Developer-52ce9ef0ba8d4a3583ac46a5787dd888"
+                href="https://jihoondev.notion.site/75462941d48b4f8c853886b6ea2d8e2e"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -149,9 +150,6 @@ function Home() {
               </a>
             </HelloBtn>
           </BtnDiv>
-          <ResumeA>
-            <ResumeBtn>DownLoad Resume</ResumeBtn>
-          </ResumeA>
         </HelloDiv>
         <CircleDiv>
           <Circle />

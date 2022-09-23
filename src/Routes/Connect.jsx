@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 const ConnectDiv = styled.section`
   width: 70%;
+  height: 1000px;
   max-width: 1440px;
   margin: 0 auto;
   align-items: center;
